@@ -6,10 +6,9 @@ const getIngredientList = async () => {
     let list = await res.json();
     console.log(list);
     
-    // console.log(list.items);
     return list;
     };
-export default class SecondPage extends Component {
+export default class Page2 extends Component {
     constructor(props) {
         super(props);
         this.state ={

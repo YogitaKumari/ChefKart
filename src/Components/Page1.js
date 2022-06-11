@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../App.css';
-// import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+
 const getPopularDishList = async () => {
 let res =await fetch("https://8b648f3c-b624-4ceb-9e7b-8028b7df0ad0.mock.pstmn.io/dishes/v1/",{
     method:"GET",
@@ -8,7 +8,6 @@ let res =await fetch("https://8b648f3c-b624-4ceb-9e7b-8028b7df0ad0.mock.pstmn.io
 let list = await res.json();
 console.log(list);
 
-// console.log(list.items);
 return list.popularDishes;
 };
 const getDishList = async () => {
@@ -18,10 +17,10 @@ const getDishList = async () => {
     let list = await res.json();
     console.log(list);
     
-    // console.log(list.items);
+    
     return list.dishes;
     };
-export default class Header extends Component {
+export default class Page1 extends Component {
     constructor(props) {
         super(props);
         this.state ={
@@ -112,7 +111,7 @@ export default class Header extends Component {
               }
               </div>    
               <div>
-                  3Food items selected
+                  3 Food items selected
               </div>
 
           </div>
